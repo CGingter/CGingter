@@ -148,7 +148,9 @@ a.disabled:focus::after {
   margin-top: 20px;
   border-radius: 12px;
   text-align: justify;
-  hyphens: auto;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   width: 100%;
 }
