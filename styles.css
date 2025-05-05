@@ -145,7 +145,7 @@ a.disabled:focus::after {
   background: white;
   color: rgba(36, 55, 106, 1);
   padding: 20px 20px;
-  margin-top: 20px;
+  margin-top: 0px;
   border-radius: 12px;
   text-align: justify;
   word-break: normal;
