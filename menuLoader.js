@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Aktuellen Pfad holen
       const currentPath = window.location.pathname.split('/').pop()
-      if (currentPath === "impressum.html")
+      if (currentPath === "impressum.html" || currentPath === "datenschutz.html")
         return;
 
       // Alle Menülinks durchgehen
