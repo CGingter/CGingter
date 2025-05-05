@@ -21,7 +21,7 @@ body {
   background: rgba(3, 152, 158, 0.95); /* Türkis Rand */
   min-height: 100vh;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .inhalt-container {
@@ -183,7 +183,7 @@ a.disabled:focus::after {
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
   transition: height 0.4s ease;
   overflow: hidden;
-  height: 40px;
+  height: 50px;
 }
 
 .taskbar-links {
@@ -275,6 +275,50 @@ h1 {
   position: relative;
 }
 
+.sticky-action-button {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #03637b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: none;
+}
+
+.taskbar-toggle {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  background: none;
+  padding: 4px;
+  border-radius: 4px;
+  z-index: 20;
+  transition: transform 0.3s ease;
+}
+
+.taskbar-hidden {
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.taskbar-visible {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.taskbar-expanded .taskbar-toggle i {
+  transform: rotate(180deg);
+}
+
 /* Mobile Layout */
 @media (max-width: 768px), (orientation: landscape) and (max-height: 500px) {
   .top-menu {
@@ -285,9 +329,13 @@ h1 {
     padding: 0 20px;
   }
 
-.hauptinhalte {
-  margin-top: 0px;
-}
+  .sticky-action-button {
+    display: block;
+  }
+
+  .hauptinhalte {
+    margin-top: 0px;
+  }
 
   h2 {
     display: block;
@@ -347,7 +395,7 @@ h1 {
   }
 
   .inhalt-container {
-    margin-bottom: 260px; /* Sorgt dafür, dass genug Platz für die Taskbar bleibt */
+    margin-bottom: 60px; /* Sorgt dafür, dass genug Platz für die Taskbar bleibt */
   }
 
   .textinhalte {
@@ -366,6 +414,7 @@ h1 {
     transition: height 0.4s ease;
     flex-direction: column; /* Vertikale Ausrichtung der Links und Details */
     align-items: center; /* Zentrieren der Links */
+    height: 50px; /* Standardhöhe im eingeklappten Zustand */
   }
 
   /* Taskbar-Links für mobile Geräte */
@@ -380,25 +429,38 @@ h1 {
 
   /* Taskbar-Details anpassen */
   .taskbar-details {
-    display: none; /* Details sind standardmäßig ausgeblendet */
-    opacity: 0;
-    max-height: 0;
-    transition: opacity 0.5s ease, max-height 0.5s ease;
+    display: flex;
+    justify-content: space-between; /* Halte die anderen Elemente getrennt */
+    gap: 20px; /* Abstand zwischen den Spalten */
+    text-align: left; /* Links ausrichten */
+    padding: 10px; /* Ein wenig Abstand von den Rändern */
   }
 
   /* Text in der Taskbar anpassen */
   .taskbar-details a {
-    font-size: 0.9rem; /* Etwas kleinere Schriftgröße */
+    color: white;
+    text-decoration: underline;
+    padding: 0; /* Kein extra Padding */
+    margin: 0; /* Kein extra Margin */
+    font-size: 0.9rem; /* Standard-Schriftgröße */
+    transition: color 0.3s ease;
   }
 
   .taskbar-expanded {
     height: auto; /* Anpassen der Höhe bei Erweiterung */
     padding: 10px 5px;
   }
+  .taskbar-details .details-column p {
+    margin: 0;
+    padding-left: 0; /* Kein linker Abstand */
+  }
 
+  .taskbar-details a:hover {
+    color: #a8e6ff; /* Sanftes Türkis beim Hover */
+  }
   .taskbar-expanded .taskbar-details {
     display: block;
     opacity: 1;
-    max-height: 200px; /* Hier können wir die Höhe nach Belieben anpassen */
+    max-height: 220px; /* Hier können wir die Höhe nach Belieben anpassen */
   }
 }
