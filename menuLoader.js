@@ -79,15 +79,3 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Fehler beim Laden des Menüs:', error)
     })
 })
-
-window.addEventListener('scroll', () => {
-  const taskbar = document.querySelector('.taskbar')
-  const scrollBottom =
-    window.innerHeight + window.scrollY >= document.body.offsetHeight
-
-  if (scrollBottom) {
-    taskbar.classList.add('taskbar-expanded')
-  } else {
-    taskbar.classList.remove('taskbar-expanded')
-  }
-})
