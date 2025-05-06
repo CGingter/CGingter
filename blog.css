@@ -47,7 +47,7 @@
     color: rgba(36, 55, 106, 1);
     line-height: 1.6;
     text-align: justify;
-    hyphens: auto;
+    hyphens: none;
   }
   
   /* Toggle‑Button */
