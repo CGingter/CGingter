@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt | AKADEMED</title>
+    <script src="menuLoader.js" defer></script>
+    <script src="taskbarLoader.js" defer></script>
+    <script src="Kontakt.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="inhalt-container">
+        <div class="hauptinhalte">
+          <div class="textinhalte">
+            <div class="contact-form" id="contact-form">
+              <h2>Kontaktformular</h2>
+              <form id="form" onsubmit="handleSubmit(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Nachricht:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+
+                <button type="submit">Absenden</button>
+              </form>
+            </div>
+
+            <!-- Erfolgsnachricht div -->
+            <div
+              class="success-message"
+              id="success-message"
+              style="display: none"
+            >
+              <p>Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.</p>
+              <button onclick="resetForm()">Zurück</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

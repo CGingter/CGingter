@@ -137,7 +137,7 @@ a.disabled:focus::after {
   object-fit: contain;
   display: block;
   border-radius: 12px;
-  margin: 20px 0;
+  margin-top: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -319,6 +319,71 @@ h1 {
   transform: rotate(180deg);
 }
 
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 10px 15px;
+  background: #24b47e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #1d9e6f;
+}
+
+/* Erfolgsnachricht */
+.success-message {
+  text-align: center;
+  background: #24b47e;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.success-message p {
+  font-size: 18px;
+}
+
+.success-message button {
+  background: white;
+  color: #24b47e;
+  border: 2px solid white;
+  padding: 10px 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.success-message button:hover {
+  background: #f1f1f1;
+  color: #1d9e6f;
+}
+
 /* Mobile Layout */
 @media (max-width: 768px), (orientation: landscape) and (max-height: 500px) {
   .top-menu {
@@ -334,7 +399,7 @@ h1 {
   }
 
   .hauptinhalte {
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
   h2 {
