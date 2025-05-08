@@ -4,7 +4,7 @@ async function handleSubmit(event) {
     const formData = new FormData(document.getElementById('form'));
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/1bf19d7f8beb4e91a493f79c27ba3838', {
+      const response = await fetch('https://formsubmit.co/ajax/info@akademed.de', {
         method: 'POST',
         body: formData
       });

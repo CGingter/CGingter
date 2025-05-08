@@ -326,6 +326,9 @@ h1 {
   border-radius: 8px;
   background: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .contact-form input,
@@ -335,6 +338,20 @@ h1 {
   margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #24376a;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-form label .optional {
+  font-weight: normal;
+  color: #888;
+  margin-left: 0.4rem;
+  font-size: 0.9em;
 }
 
 .contact-form button {
@@ -382,6 +399,25 @@ h1 {
 .success-message button:hover {
   background: #f1f1f1;
   color: #1d9e6f;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  max-width: 600px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 0.55rem;
+  flex-shrink: 0; /* Verhindert, dass die Checkbox skaliert */
+  max-width: fit-content;
+}
+
+.checkbox-group label {
+  display: inline; /* wichtig, damit der Text nicht blockartig wirkt */
+  line-height: 1.4;
 }
 
 /* Mobile Layout */
