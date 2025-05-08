@@ -325,7 +325,7 @@ h1 {
   padding: 20px;
   border-radius: 8px;
   background: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input,
@@ -359,7 +359,7 @@ h1 {
   color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
 
@@ -428,6 +428,9 @@ h1 {
     z-index: 1000;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+    max-height: 65vh; /* Begrenze die Höhe auf 80% des Viewports */
+    overflow-y: auto; /* Ermöglicht Scrollen innerhalb des Menüs */
+    overscroll-behavior: contain; /* Verhindert Seitenscrollen bei Menü-Scroll */
   }
 
   .top-menu-center.active {
