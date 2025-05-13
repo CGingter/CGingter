@@ -65,7 +65,9 @@
   .entry-toggle:hover {
     color: #027a7f;
   }
-  
+  .entry-fulltext {
+    display: none;
+  }
   /* .entry-expanded sorgt dafür, dass fulltext sichtbar ist */
   .entry-expanded .entry-fulltext {
     display: block;
